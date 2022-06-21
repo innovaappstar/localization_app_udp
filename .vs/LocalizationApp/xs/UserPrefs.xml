@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{4FD349F8-E051-4ACF-875A-17ED6493654C}|Default">
+  <MonoDevelop.Ide.ItemProperties.ServerUDP PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ServerUDP/dto/RequestCommandDTO.cs">
+    <Files>
+      <File FileName="ServerUDP/Program.cs" Line="14" Column="1" />
+      <File FileName="ServerUDP/server/UDPSocket.cs" Line="65" Column="32" />
+      <File FileName="ServerUDP/constants/Constants.cs" Line="11" Column="36" />
+      <File FileName="ServerUDP/domain/HandlerCommands.cs" Line="8" Column="16" />
+      <File FileName="ServerUDP/dto/CommandDTO.cs" Line="15" Column="16" />
+      <File FileName="ServerUDP/dto/RequestCommandDTO.cs" Line="6" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LocalizationApp" expanded="True">
+            <Node name="ServerUDP" expanded="True">
+              <Node name="constants" expanded="True" />
+              <Node name="domain" expanded="True" />
+              <Node name="dto" expanded="True">
+                <Node name="RequestCommandDTO.cs" selected="True" />
+              </Node>
+              <Node name="interfaces" expanded="True" />
+              <Node name="server" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
