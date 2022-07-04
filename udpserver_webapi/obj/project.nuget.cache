@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "BRCXouxN+bjtDwM10T2B31kAMdis/A/OO0G9HG4pjvcEy6I6Z9ykrYyagQKV4xJ+Lg7A8bMrLnH3rNMfn1OH4w==",
+  "success": true,
+  "projectFilePath": "/Users/abexa/Projects/LocalizationApp/udpserver_webapi/udpserver_webapi.csproj",
+  "expectedPackageFiles": [
+    "/Users/abexa/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/abexa/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/abexa/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/abexa/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/abexa/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/abexa/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

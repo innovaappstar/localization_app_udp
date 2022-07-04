@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="server\" />
+    <None Remove="constants\" />
+    <None Remove="domain\" />
+    <None Remove="dto\" />
+    <None Remove="interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="server\" />
+    <Folder Include="constants\" />
+    <Folder Include="domain\" />
+    <Folder Include="dto\" />
+    <Folder Include="interfaces\" />
+  </ItemGroup>
+</Project>

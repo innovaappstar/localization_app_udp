@@ -1,27 +1,31 @@
 ﻿<Properties StartupConfiguration="{4FD349F8-E051-4ACF-875A-17ED6493654C}|Default">
+  <MonoDevelop.Ide.ItemProperties.udpserver__webapi PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.ServerUDP PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ServerUDP/Dockerfile">
+  <MonoDevelop.Ide.Workbench ActiveDocument="docker-compose.yml">
     <Files>
-      <File FileName="ServerUDP/Program.cs" Line="25" Column="31" />
-      <File FileName="ServerUDP/server/UDPSocket.cs" Line="61" Column="28" />
-      <File FileName="docker-compose.yml" Line="6" Column="11" />
-      <File FileName="ServerUDP/readme.md" Line="14" Column="1" />
-      <File FileName="ServerUDP/Dockerfile" Line="22" Column="23" />
+      <File FileName="ServerUDP/services/MQTTService.cs" Line="35" Column="37" />
+      <File FileName="ServerUDP/Program.cs" Line="41" Column="33" />
+      <File FileName="ServerUDP/server/UDPSocket.cs" Line="35" Column="66" />
+      <File FileName="ServerUDP/readme.md" Line="18" Column="1" />
+      <File FileName="docker-compose.yml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LocalizationApp" expanded="True">
             <Node name="docker-compose" expanded="True">
-              <Node name="docker-compose.yml" expanded="True" />
+              <Node name="docker-compose.yml" expanded="True" selected="True" />
             </Node>
             <Node name="ServerUDP" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
               <Node name="constants" expanded="True" />
               <Node name="domain" expanded="True" />
               <Node name="dto" expanded="True" />
               <Node name="interfaces" expanded="True" />
               <Node name="server" expanded="True" />
-              <Node name="Dockerfile" selected="True" />
+              <Node name="services" expanded="True" />
             </Node>
           </Node>
         </State>

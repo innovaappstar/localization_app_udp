@@ -23,3 +23,4 @@
 /Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Debug/netcoreapp3.1/System.Text.Encodings.Web.dll
 /Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Debug/netcoreapp3.1/System.Text.Json.dll
 /Users/abexa/Projects/LocalizationApp/ServerUDP/obj/Debug/netcoreapp3.1/ServerUDP.csproj.CopyComplete
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Debug/netcoreapp3.1/MQTTnet.dll

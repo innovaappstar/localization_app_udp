@@ -23,15 +23,17 @@ namespace ServerUDP
             //process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
             //process.Start();
             //process.WaitForExit(1000 * 60 * 5);    // Wait up to five minutes.
-            //Console.ReadKey();
+            Console.ReadKey();
             //Thread.Sleep(Timeout.Infinite);
             //await Task.Run(() => Thread.Sleep(Timeout.Infinite));
 
-            do
-            {
-                Console.WriteLine($"Type: quit<Enter> to end {Process.GetCurrentProcess().ProcessName}");
-            }
-            while (!Console.ReadLine().Trim().Equals("quit", StringComparison.OrdinalIgnoreCase));
+            //do
+            //{
+            //    Console.WriteLine($"Type: quit<Enter> to end {Process.GetCurrentProcess().ProcessName}");
+            //}
+            //while (!Console.ReadLine().Trim().Equals("quit", StringComparison.OrdinalIgnoreCase));
+
+            while (true) { }
         }
 
         public static void startUDPServer()
@@ -41,6 +43,8 @@ namespace ServerUDP
             s.Server("0.0.0.0", 27000, "ok\n");
             //s.Server("192.168.1.55", 27000, "ok\n");
         }
+
+        
     }
 
 }

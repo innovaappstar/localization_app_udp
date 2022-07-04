@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -6,6 +7,7 @@ using System.Text;
 using System.Text.Json;
 using ServerUDP.constants;
 using ServerUDP.dto;
+using ServerUDP.services;
 
 namespace ServerUDP.server
 {
@@ -20,6 +22,7 @@ namespace ServerUDP.server
         private State state = new State();
         private EndPoint remoteEndpoint = new IPEndPoint(IPAddress.Any, 0);
         private AsyncCallback recv = null;
+        private static MqttService mqttService;
 
         public class State
         {
@@ -28,8 +31,15 @@ namespace ServerUDP.server
 
         public void Server(string address, int port, string? answerMessage = null)
         {
+            mqttService = new MqttService();
+            mqttService.Start("broker.mqttdashboard.com", "server_0001", message =>
+            {
+                Console.WriteLine("======");
+                Console.WriteLine(message);
+            });
             socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.ReuseAddress, true);
             socket.Bind(new IPEndPoint(IPAddress.Parse(address), port));
+
             Receive(answerMessage);
         }
 
@@ -66,17 +76,19 @@ namespace ServerUDP.server
                     var commandFound = Constants.Commands.FirstOrDefault(item => item.type == requestCommandDTO.type);
                     Console.WriteLine("-----------------");
                     Console.WriteLine("RECIBIDO: Type {0}, Content {1}", requestCommandDTO.type, requestCommandDTO.content);
+                    mqttService.SendCode(dataFromClient);
                 }
                 catch ( Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
                 //Console.WriteLine("RECV: {0}: {1}, {2}", remoteEndpoint.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes));
-
-                if(answerMessage != null)
+                //Console.WriteLine("answerMessage server > {0}", answerMessage);
+                if (answerMessage != null)
                 {
                     byte[] data = Encoding.ASCII.GetBytes(answerMessage);
                     socket.SendTo(data, data.Length, SocketFlags.None, remoteEndpoint);
+                    //Console.WriteLine("socket send to > {0}", socket);
                 }
             }, state);
         }

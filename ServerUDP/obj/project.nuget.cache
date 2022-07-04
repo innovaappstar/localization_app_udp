@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7fchg1LNzqt9X7dis6wAEAuQpf+44jmWK5/fuFKEDya46L22YxoY2OCfXkfh60iT1FgfcwA/5p70GNltA9PXzA==",
+  "dgSpecHash": "2yl01RmM3e7lllTTO+9++mu78S70rl8lA532vsTvnDZVeffmvMmNQX8mbJ2BZOBYLyGwOXBbPsleFM1qiR65MQ==",
   "success": true,
   "projectFilePath": "/Users/abexa/Projects/LocalizationApp/ServerUDP/ServerUDP.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "/Users/abexa/.nuget/packages/microsoft.extensions.fileproviders.physical/6.0.0/microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512",
     "/Users/abexa/.nuget/packages/microsoft.extensions.filesystemglobbing/6.0.0/microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
     "/Users/abexa/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/abexa/.nuget/packages/mqttnet/3.1.2/mqttnet.3.1.2.nupkg.sha512",
     "/Users/abexa/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/abexa/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
     "/Users/abexa/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512"

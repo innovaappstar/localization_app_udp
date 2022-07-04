@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = ServerUDP
+build_property.ProjectDir = /Users/abexa/Projects/LocalizationApp/ServerUDP/

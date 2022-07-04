@@ -1,0 +1,15 @@
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/ServerUDP.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/ServerUDP.deps.json
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/ServerUDP.runtimeconfig.json
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/ServerUDP.pdb
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.Json.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/Microsoft.Extensions.Primitives.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/System.Runtime.CompilerServices.Unsafe.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/System.Text.Encodings.Web.dll
+/Users/abexa/Projects/LocalizationApp/ServerUDP/bin/Release/netcoreapp3.1/publish/System.Text.Json.dll

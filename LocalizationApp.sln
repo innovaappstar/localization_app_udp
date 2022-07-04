@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerUDP", "ServerUDP\Serv
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E58D0E2D-4624-46DC-96EF-F20621B0F6AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udpserver_webapi", "udpserver_webapi\udpserver_webapi.csproj", "{54DD407C-BFB9-43DD-8331-BD9AA4CEC450}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E58D0E2D-4624-46DC-96EF-F20621B0F6AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E58D0E2D-4624-46DC-96EF-F20621B0F6AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E58D0E2D-4624-46DC-96EF-F20621B0F6AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54DD407C-BFB9-43DD-8331-BD9AA4CEC450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54DD407C-BFB9-43DD-8331-BD9AA4CEC450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54DD407C-BFB9-43DD-8331-BD9AA4CEC450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54DD407C-BFB9-43DD-8331-BD9AA4CEC450}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
