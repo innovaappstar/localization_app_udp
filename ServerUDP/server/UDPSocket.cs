@@ -8,6 +8,7 @@ using System.Text.Json;
 using ServerUDP.constants;
 using ServerUDP.dto;
 using ServerUDP.services;
+using ServerUDP.utilities;
 
 namespace ServerUDP.server
 {
@@ -32,11 +33,13 @@ namespace ServerUDP.server
         public void Server(string address, int port, string? answerMessage = null)
         {
             mqttService = new MqttService();
-            mqttService.Start("broker.mqttdashboard.com", "server_0001", message =>
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
+            mqttService.Start(DevConstants.HIVE_HOST_BROKER_MQTT.Item1, DevConstants.MQTT_ID_TOPIC_SERVER_001, message =>
             {
                 Console.WriteLine("======");
                 Console.WriteLine(message);
             });
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
             socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.ReuseAddress, true);
             socket.Bind(new IPEndPoint(IPAddress.Parse(address), port));
 
@@ -76,7 +79,7 @@ namespace ServerUDP.server
                     var commandFound = Constants.Commands.FirstOrDefault(item => item.type == requestCommandDTO.type);
                     Console.WriteLine("-----------------");
                     Console.WriteLine("RECIBIDO: Type {0}, Content {1}", requestCommandDTO.type, requestCommandDTO.content);
-                    mqttService.SendCode(dataFromClient);
+                    mqttService.SendCode(dataFromClient, DevConstants.MQTT_RQ_TOPIC_WINDOWS_FORM_001);
                 }
                 catch ( Exception e)
                 {

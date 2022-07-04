@@ -15,3 +15,11 @@ $> {"type":"track", "content": "hola mundo"}
 # HiveMQ
 
 url : http://www.hivemq.com/demos/websocket-client/
+
+topic publish : topic/windows_form/0001/RQ
+topic suscribe : topic/server/0001/RQ
+
+
+# NuGet
+
+more info : https://www.luisllamas.es/como-usar-el-protocolo-mqtt-con-c-y-la-libreria-mqttnet/

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MQTTnet;
 using MQTTnet.Client;
 using MQTTnet.Client.Options;
+using ServerUDP.utilities;
 
 namespace ServerUDP.services
 {
@@ -16,14 +17,14 @@ namespace ServerUDP.services
         {
             var factory = new MqttFactory();
             var options = new MqttClientOptionsBuilder()
-            .WithTcpServer(brokerIp, 1883)
+            .WithTcpServer(brokerIp, DevConstants.HIVE_HOST_BROKER_MQTT.Item2)
             .WithClientId(clientId)
             .Build();
             mqttClient = factory.CreateMqttClient();
             mqttClient.UseConnectedHandler(async e =>
             {
                 Debug.WriteLine("MQTT Connected");
-                await mqttClient.SubscribeAsync(new MqttTopicFilterBuilder().WithTopic("api_client").Build());
+                await mqttClient.SubscribeAsync(new MqttTopicFilterBuilder().WithTopic(DevConstants.MQTT_RQ_TOPIC_SERVER_001).Build());
             });
             mqttClient.UseApplicationMessageReceivedHandler(e =>
             {
@@ -44,9 +45,10 @@ namespace ServerUDP.services
             });
             await mqttClient.ConnectAsync(options, CancellationToken.None);
         }
-        public async Task SendCode(string message)
+        public async Task SendCode(string message, string? topic = null)
         {
-            await mqttClient.PublishAsync("topic/abexa/test", message);
+            if(topic != null)
+                await mqttClient.PublishAsync(topic, message);
         }
     }
 }
