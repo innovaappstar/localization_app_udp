@@ -1,26 +1,27 @@
 ﻿<Properties StartupConfiguration="{4FD349F8-E051-4ACF-875A-17ED6493654C}|Default">
   <MonoDevelop.Ide.ItemProperties.ServerUDP PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ServerUDP/dto/RequestCommandDTO.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ServerUDP/readme.md">
     <Files>
-      <File FileName="ServerUDP/Program.cs" Line="14" Column="1" />
-      <File FileName="ServerUDP/server/UDPSocket.cs" Line="65" Column="32" />
-      <File FileName="ServerUDP/constants/Constants.cs" Line="11" Column="36" />
-      <File FileName="ServerUDP/domain/HandlerCommands.cs" Line="8" Column="16" />
-      <File FileName="ServerUDP/dto/CommandDTO.cs" Line="15" Column="16" />
-      <File FileName="ServerUDP/dto/RequestCommandDTO.cs" Line="6" Column="18" />
+      <File FileName="ServerUDP/Program.cs" Line="27" Column="37" />
+      <File FileName="ServerUDP/server/UDPSocket.cs" Line="19" Column="30" />
+      <File FileName="docker-compose.yml" Line="12" Column="25" />
+      <File FileName="ServerUDP/Dockerfile" Line="22" Column="14" />
+      <File FileName="ServerUDP/readme.md" Line="2" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LocalizationApp" expanded="True">
+            <Node name="docker-compose" expanded="True">
+              <Node name="docker-compose.yml" expanded="True" />
+            </Node>
             <Node name="ServerUDP" expanded="True">
               <Node name="constants" expanded="True" />
               <Node name="domain" expanded="True" />
-              <Node name="dto" expanded="True">
-                <Node name="RequestCommandDTO.cs" selected="True" />
-              </Node>
+              <Node name="dto" expanded="True" />
               <Node name="interfaces" expanded="True" />
               <Node name="server" expanded="True" />
+              <Node name="readme.md" selected="True" />
             </Node>
           </Node>
         </State>
@@ -29,6 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

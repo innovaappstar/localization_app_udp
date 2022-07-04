@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  serverudp:
+    image: ${DOCKER_REGISTRY-}serverudp
+    build:
+      context: .
+      dockerfile: ServerUDP/Dockerfile
+    expose:
+      - '27000/udp'
+    ports:
+      - '27000:27000/tcp'
+      - '27000:27000/udp'

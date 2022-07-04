@@ -1,0 +1,11 @@
+/Users/abexa/Projects/LocalizationApp/bin/Debug/ServerUDP.deps.json
+/Users/abexa/Projects/LocalizationApp/bin/Debug/ServerUDP.runtimeconfig.json
+/Users/abexa/Projects/LocalizationApp/bin/Debug/ServerUDP.runtimeconfig.dev.json
+/Users/abexa/Projects/LocalizationApp/bin/Debug/ServerUDP.dll
+/Users/abexa/Projects/LocalizationApp/bin/Debug/System.Text.Json.dll
+/Users/abexa/Projects/LocalizationApp/bin/Debug/System.Text.Encodings.Web.dll
+/Users/abexa/Projects/LocalizationApp/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll
+/Users/abexa/Projects/LocalizationApp/bin/Debug/ServerUDP.pdb
+/Users/abexa/Projects/LocalizationApp/obj/Debug/docker-compose.dcproj.AssemblyReference.cache
+/Users/abexa/Projects/LocalizationApp/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
+/Users/abexa/Projects/LocalizationApp/obj/Debug/docker-compose.dcproj.CopyComplete

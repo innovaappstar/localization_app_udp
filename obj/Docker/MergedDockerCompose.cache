@@ -1,0 +1,12 @@
+services:
+  serverudp:
+    build:
+      context: /Users/abexa/Projects/LocalizationApp
+      dockerfile: ServerUDP/Dockerfile
+    expose:
+    - '27000'
+    image: serverudp
+    ports:
+    - published: 27000
+      target: 27000
+version: '3.4'

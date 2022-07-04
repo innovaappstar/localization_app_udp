@@ -1,0 +1,31 @@
+services:
+  serverudp:
+    build:
+      context: /Users/abexa/Projects/LocalizationApp
+      dockerfile: ServerUDP/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: ServerUDP
+      target: base
+    container_name: ServerUDP
+    entrypoint: tail -f /dev/null
+    environment:
+      NUGET_FALLBACK_PACKAGES: ''
+    expose:
+    - '27000'
+    image: serverudp:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/ServerUDP.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 27000
+      target: 27000
+    tty: true
+    volumes:
+    - /Users/abexa/Projects/LocalizationApp/ServerUDP:/app:rw
+    - /Users/abexa/vsdbg/vs2017u5:/remote_debugger:rw
+    - /Users/abexa/.nuget/packages:/root/.nuget/packages:ro
+version: '3.4'
