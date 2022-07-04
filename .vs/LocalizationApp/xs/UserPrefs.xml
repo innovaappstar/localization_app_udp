@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{4FD349F8-E051-4ACF-875A-17ED6493654C}|Default">
   <MonoDevelop.Ide.ItemProperties.ServerUDP PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ServerUDP/readme.md">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ServerUDP/Dockerfile">
     <Files>
-      <File FileName="ServerUDP/Program.cs" Line="27" Column="37" />
-      <File FileName="ServerUDP/server/UDPSocket.cs" Line="19" Column="30" />
-      <File FileName="docker-compose.yml" Line="12" Column="25" />
-      <File FileName="ServerUDP/Dockerfile" Line="22" Column="14" />
-      <File FileName="ServerUDP/readme.md" Line="2" Column="24" />
+      <File FileName="ServerUDP/Program.cs" Line="25" Column="31" />
+      <File FileName="ServerUDP/server/UDPSocket.cs" Line="61" Column="28" />
+      <File FileName="docker-compose.yml" Line="6" Column="11" />
+      <File FileName="ServerUDP/readme.md" Line="14" Column="1" />
+      <File FileName="ServerUDP/Dockerfile" Line="22" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,7 +21,7 @@
               <Node name="dto" expanded="True" />
               <Node name="interfaces" expanded="True" />
               <Node name="server" expanded="True" />
-              <Node name="readme.md" selected="True" />
+              <Node name="Dockerfile" selected="True" />
             </Node>
           </Node>
         </State>
