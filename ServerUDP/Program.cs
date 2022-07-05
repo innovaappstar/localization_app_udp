@@ -23,7 +23,12 @@ namespace ServerUDP
             //process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
             //process.Start();
             //process.WaitForExit(1000 * 60 * 5);    // Wait up to five minutes.
-            Console.ReadKey();
+
+
+            //Console.ReadKey();
+
+
+
             //Thread.Sleep(Timeout.Infinite);
             //await Task.Run(() => Thread.Sleep(Timeout.Infinite));
 

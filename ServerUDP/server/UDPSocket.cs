@@ -5,11 +5,14 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.Json;
+using System.Web;
+using System.Xml;
 using ServerUDP.constants;
 using ServerUDP.dto;
 using ServerUDP.services;
 using ServerUDP.utilities;
-
+// {"type":"track_command", "content": "11|8~0|240|05/07/2022 14:03:14|||412|-11.98958|-77.06691|2.2489796|34"}
+// {"type":"track_command", "content": "8|1|240|1~05/07/2022 13:00:18|-11.98938|-77.06687|0.9|15.0|88|2|412|A|0|0|0|0|1129"}
 namespace ServerUDP.server
 {
     public class UDPSocket
@@ -42,7 +45,6 @@ namespace ServerUDP.server
 #pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
             socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.ReuseAddress, true);
             socket.Bind(new IPEndPoint(IPAddress.Parse(address), port));
-
             Receive(answerMessage);
         }
 
@@ -71,15 +73,27 @@ namespace ServerUDP.server
                 int bytes = socket.EndReceiveFrom(ar, ref remoteEndpoint);
                 socket.BeginReceiveFrom(so.buffer, 0, bufSize, SocketFlags.None, ref remoteEndpoint, recv, so);
                 var dataFromClient = Encoding.ASCII.GetString(so.buffer, 0, bytes);
-                //Console.WriteLine(dataFromClient);
+                //Console.WriteLine("dataFromClient => {0}", dataFromClient);
                 try
                 {
-                    // Department deptObj = JsonSerializer.Deserialize<Department>(jsonData);
                     RequestCommandDTO requestCommandDTO = JsonSerializer.Deserialize<RequestCommandDTO>(dataFromClient);
-                    var commandFound = Constants.Commands.FirstOrDefault(item => item.type == requestCommandDTO.type);
-                    Console.WriteLine("-----------------");
-                    Console.WriteLine("RECIBIDO: Type {0}, Content {1}", requestCommandDTO.type, requestCommandDTO.content);
-                    mqttService.SendCode(dataFromClient, DevConstants.MQTT_RQ_TOPIC_WINDOWS_FORM_001);
+                    var commandFound = Constants.Commands.FirstOrDefault(item => item != null && item.type != null & item.type == requestCommandDTO.type);
+                    if(commandFound.type == "mobile-gps")
+                    {
+                        LocationDTO locationDTO = requestCommandDTO.GetLocationDTO();
+                        Console.WriteLine("-----------------");
+                        Console.WriteLine("RECIBIDO: Type {0}, Content {1}", requestCommandDTO.type, requestCommandDTO.content);
+                        if (locationDTO.FechaHora == null || locationDTO.FechaHora.Length == 0)
+                        { }
+                        else
+                        {
+                            string message = JsonSerializer.Serialize(locationDTO);
+                            string quoted = HttpUtility.JavaScriptStringEncode(message);
+                            string unescapedJsonString = quoted.Replace("\\", ""); // JsonConvert.DeserializeObject<string>(quoted);
+                            LocationDTO locationDTO2Unparsed = JsonSerializer.Deserialize<LocationDTO>(unescapedJsonString);
+                            mqttService.SendCode(quoted, DevConstants.MQTT_RQ_TOPIC_WINDOWS_FORM_001);
+                        }
+                    }
                 }
                 catch ( Exception e)
                 {

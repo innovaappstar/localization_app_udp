@@ -9,7 +9,7 @@ namespace ServerUDP.constants
     public class Constants
     {
         public static List<CommandDTO> Commands = new List<CommandDTO> {
-            new CommandDTO("track_command", new TrackerCommand()),
+            new CommandDTO("mobile-gps", new TrackerCommand()),
             new CommandDTO("show_all_clients_command", new ShowAllClientsCommand())
         };
 

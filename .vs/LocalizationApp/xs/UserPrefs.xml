@@ -1,13 +1,12 @@
 ﻿<Properties StartupConfiguration="{4FD349F8-E051-4ACF-875A-17ED6493654C}|Default">
   <MonoDevelop.Ide.ItemProperties.udpserver__webapi PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.ServerUDP PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ServerUDP/readme.md">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ServerUDP/server/UDPSocket.cs">
     <Files>
-      <File FileName="ServerUDP/services/MQTTService.cs" Line="42" Column="56" />
-      <File FileName="ServerUDP/Program.cs" Line="41" Column="33" />
-      <File FileName="ServerUDP/server/UDPSocket.cs" Line="37" Column="94" />
-      <File FileName="ServerUDP/utilities/Constants.cs" Line="20" Column="6" />
-      <File FileName="ServerUDP/readme.md" Line="19" Column="1" />
+      <File FileName="ServerUDP/server/UDPSocket.cs" Line="76" Column="46" />
+      <File FileName="ServerUDP/Program.cs" Line="28" Column="27" />
+      <File FileName="ServerUDP/constants/Constants.cs" Line="12" Column="39" />
+      <File FileName="ServerUDP/utilities/DevConstants.cs" Line="14" Column="64" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,17 +16,15 @@
               <Node name="docker-compose.yml" expanded="True" />
             </Node>
             <Node name="ServerUDP" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
               <Node name="constants" expanded="True" />
               <Node name="domain" expanded="True" />
               <Node name="dto" expanded="True" />
               <Node name="interfaces" expanded="True" />
-              <Node name="server" expanded="True" />
+              <Node name="server" expanded="True">
+                <Node name="UDPSocket.cs" selected="True" />
+              </Node>
               <Node name="services" expanded="True" />
               <Node name="utilities" expanded="True" />
-              <Node name="readme.md" selected="True" />
             </Node>
           </Node>
         </State>
